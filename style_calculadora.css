@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;    
+}
+.calc{
+    font-size: 2rem;
+    background-color: black;
+}
+.row{
+    display: flex;
+}
+.tela{
+    color: #fff;
+    flex: 1;
+    text-align: right;
+}
+.tecla{
+    flex: 1;
+    background-color: #c1c1c1;
+    text-align: center;
+    padding-block: 1em;
+}
+.op{
+    background-color: coral;
+}
+.clear{
+    flex: 2;
+    padding-right: .125em; /* para alinhar a borda */
+}
+.zero{
+    flex: 3;
+    padding-right: .125em; /* para alinhar a borda */
+}
+.tecla + .tecla{
+    margin-left: .125em;
+}
+.row + .row{
+    margin-bottom: .125em;
+}
+.tecla:hover{
+    opacity: 0.6;
+}
+.tecla:active{
+    padding-block: .9em;
+}
+.naoSelecionavel {
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            /* Possível implementação no futuro */
+    /* cursor: default; */
+}
